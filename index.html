@@ -7,12 +7,25 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <title>Map Box Markers</title>
+    <!-- Map box api -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+<link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- end Map box api -->
+    <title>Maps</title>
+    <script src="main.js"></script>
   </head>
   <body>
     <div class="container">
-
+      <div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiY29kZXJwYXNzIiwiYSI6ImNrcWRwbnE1dDE4aDAybm92ZXZvMWZoNXYifQ.RwNOEzig0atTUkVBWvNBiQ';
+var map = new mapboxgl.Map({
+container: 'map',
+center: [37.5, 0.2],
+zoom: 13,
+style: 'mapbox://styles/mapbox/streets-v11'
+});
+</script>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
